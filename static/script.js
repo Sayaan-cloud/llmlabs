@@ -1,5 +1,4 @@
 // -----------------------------
-// Simple modern chat frontend
 // Expects backend endpoints:
 //  - POST /chat  -> { query: "..." } returns { answer: "..." }
 //  - POST /upload_pdf/ -> form-data file -> returns { status: "success", chunks: n }
@@ -283,7 +282,7 @@ async function sendMessage(prefilled){
   } catch (err){
     console.error('chat error', err);
     try { chatBox.removeChild(botHolder); } catch(e){}
-    renderMessage('bot', '⚠️ Error fetching answer.');
+    renderMessage('bot', 'Error fetching answer.');
   } finally {
     streamingController = null;
   }
@@ -293,10 +292,10 @@ sendBtn.addEventListener('click', () => sendMessage());
 userInput.addEventListener('keydown', (e)=> { if (e.key === 'Enter') sendMessage(); });
 
 // ---------- initialization ----------
-renderMessage('bot', 'Hey — ask me anything from your English textbook 😄');
+renderMessage('bot', 'Hey — ask me anything from your English textbook! ');
 loadHistory();
 if (chatHistory.length === 0) {
-  renderMessage('bot', 'Hey — ask me anything from your English textbook 😄');
+  renderMessage('bot', 'Hey — ask me anything from your English textbook!');
 }
 
 // restore theme
