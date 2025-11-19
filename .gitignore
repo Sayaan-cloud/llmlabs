@@ -1,0 +1,33 @@
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Large models and data
+*.pt
+*.bin
+*.pkl
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.h5
+*.onnx
+
+models/
+weights/
+checkpoints/
+Thumbs.db
+.DS_Store
+
+.vscode/
+
+*.log
+
+vectorstore.pkl

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LLM Textbook Chat — Modern</title>
+
+  <!-- core styles -->
+  <link rel="stylesheet" href="/static/style.css" />
+
+  <!-- markdown renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body class="light">
+
+  <div id="app" class="app">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="left">
+        <button id="newChatBtn" class="icon" title="New chat">💬</button>
+        <div class="title">LLM Textbook Chat</div>
+      </div>
+
+      <div class="right">
+        <button id="themeToggle" class="icon" title="Toggle theme">🌓</button>
+
+        <!-- dropdown menu -->
+        <div class="dropdown">
+          <button id="menuBtn" class="icon" title="Menu">☰</button>
+          <div id="menuPanel" class="dropdown-panel" hidden>
+            <label class="menu-item">
+              <input id="pdfUpload" type="file" accept=".pdf" hidden />
+              <button id="chooseFileBtn" class="menu-btn">📂 Choose PDF</button>
+            </label>
+
+            <button id="uploadBtn" class="menu-btn">⬆️ Upload & Rebuild Retriever</button>
+            <button id="evalBtn" class="menu-btn">🧪 Run Evaluation</button>
+            <button id="clearBtn" class="menu-btn danger">🧹 Clear Chat</button>
+            <div class="menu-note">Default PDF is loaded server-side. Use upload only when adding new PDF.</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Chat area -->
+    <main id="chatBox" class="chat-box" aria-live="polite">
+      <!-- messages appended by JS -->
+    </main>
+
+    <!-- composer -->
+    <footer class="composer">
+      <div class="composer-left">
+        <button id="micBtn" class="icon" title="Speak">🎙️</button>
+      </div>
+
+      <div class="composer-center">
+        <input id="userInput" type="text" autocomplete="off" placeholder="Type your question..." />
+      </div>
+
+      <div class="composer-right">
+        <button id="sendBtn" class="send" title="Send">➡️</button>
+      </div>
+    </footer>
+
+    <!-- small control row -->
+    <div class="controls-row">
+      <button id="pauseBtn" class="small-icon" title="Pause / Resume voice">⏸️</button>
+      <button id="replayBtn" class="small-icon" title="Replay last answer">🔁</button>
+      <button id="copyBtn" class="small-icon" title="Copy last answer">📋</button>
+      <button id="downloadAnsBtn" class="small-icon" title="Download last answer">💾</button>
+      <button id="downloadChat" class="small-icon" title="Download full chat">🗂️</button>
+      <span id="voiceStatus" class="voice-status">Idle</span>
+    </div>
+
+  </div>
+
+  <!-- script -->
+  <script src="/static/script.js"></script>
+</body>
+</html>
