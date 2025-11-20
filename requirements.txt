@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+jinja2
+python-multipart
+pydantic
+pydantic-settings
+numpy
+scikit-learn
+transformers
+torch
+sentence-transformers
+qdrant-client
+requests
+joblib
+tqdm
