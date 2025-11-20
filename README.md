@@ -1,4 +1,4 @@
-📘 Chat A.I+
+**📘 Chat A.I+**
 
 A lightweight, fast, LM-Studio-powered RAG chatbot built using FastAPI + HTML/CSS/JS.
 It supports:
@@ -14,8 +14,9 @@ It supports:
 ⚡ Local inference using LM Studio API
 
 ⏱️ Fast responses with vector search (FAISS/Chroma vectorstore)
+======================================================================
 
-🚀 Features
+**🚀 Features**
 ✅ Hybrid LLM System (Fallback Model)
 
 If the main model fails, Chat A.I+ automatically switches to the fallback (TinyLLaMA):
@@ -55,21 +56,10 @@ Frontend built using:
 
 HTML
 
-CSS (custom UI inspired by your screenshot)
+CSS 
 
 JavaScript
 
-Includes:
-
-Sidebar with chat history
-
-New chat button
-
-Search bar
-
-Smooth chat bubbles
-
-Purple theme to match “Chat A.I+”
 
 📂 Project Structure
 📁 project/
@@ -84,26 +74,28 @@ Purple theme to match “Chat A.I+”
       ├── style.css
       └── script.js
 
-🔧 Tech Stack
+===================================================
+
+**🔧 Tech Stack**
 Backend
 
-FastAPI
+- FastAPI
 
-LangChain
+- LangChain
 
-LM Studio (local LLM server)
+- LM Studio (local LLM server)
 
-Joblib (for vectorstore)
+- Joblib (for vectorstore)
 
-PyPDF2 (for PDF text extraction)
+- PyPDF2 (for PDF text extraction)
 
 Frontend
 
-HTML
+- HTML
 
-CSS
+- CSS
 
-JavaScript
+- JavaScript
 
 Models
 
@@ -111,7 +103,10 @@ Primary: Phi-2
 
 Fallback: TinyLlama-1.1B-Chat
 
-🛠️ Installation & Setup Guide
+==========================================================
+
+**🛠️ Installation & Setup Guide**
+
 1. Install dependencies
 pip install fastapi uvicorn langchain-openai joblib PyPDF2 jinja2
 
@@ -135,7 +130,10 @@ Visit:
 
 👉 http://127.0.0.1:8000
 
-📡 API Endpoints
+================================================
+
+**📡 API Endpoints**
+
 POST /chat
 
 Send a question:
@@ -151,15 +149,21 @@ Response:
   "answer": "Here is your answer..."
 }
 
+============================================
+
 GET /toc
 
 Returns TOC extracted from PDF.
+
+==============================
 
 GET /health
 
 Health check.
 
-🚀 Future Improvements
+===========================================
+
+**🚀 Future Improvements**
 
 🎤 Add voice input & output
 
@@ -173,6 +177,8 @@ Health check.
 
 🔄 Streaming responses (like ChatGPT)
 
-📜 License
+============================================
+
+**📜 License**
 
 This project is free for personal and educational use.
